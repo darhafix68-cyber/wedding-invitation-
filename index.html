@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="You are cordially invited to celebrate this beautiful occasion with us."
+    >
+
+    <title>Wedding Invitation</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         OPENING SCREEN
+    ====================================================== -->
+
+    <section
+        class="opening-screen"
+        id="openingScreen"
+    >
+
+
+        <!-- =================================================
+             CINEMATIC CURTAIN TRANSITION
+
+             These curtains will be controlled by JavaScript.
+             They start hidden and open after the user clicks
+             OPEN INVITATION.
+        ================================================== -->
+
+        <div
+            class="curtain-transition"
+            id="curtainTransition"
+            aria-hidden="true"
+        >
+
+            <div class="curtain curtain-left"></div>
+
+            <div class="curtain curtain-right"></div>
+
+            <div class="curtain-center-glow"></div>
+
+        </div>
+
+
+        <!-- Opening background -->
+
+        <div class="opening-background"></div>
+
+
+        <!-- Opening content -->
+
+        <div class="opening-content">
+
+
+            <div class="opening-ornament">
+                ✦
+            </div>
+
+
+            <p class="opening-small">
+                BISMILLAHIR RAHMANIR RAHEEM
+            </p>
+
+
+            <!-- Envelope -->
+
+            <div class="envelope-wrapper">
+
+                <div class="envelope">
+
+                    <div class="envelope-flap"></div>
+
+                    <div class="envelope-body">
+
+                        <div class="envelope-seal">
+                            ✦
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="opening-label">
+                YOU ARE CORDIALLY INVITED
+            </p>
+
+
+            <h1>
+                A Beautiful<br>
+                Celebration
+            </h1>
+
+
+            <div class="opening-line"></div>
+
+
+            <!-- Open invitation -->
+
+            <button
+                class="open-button"
+                id="openInvitation"
+                type="button"
+            >
+
+                <span>
+                    OPEN INVITATION
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN INVITATION
+    ====================================================== -->
+
+    <main
+        class="invitation"
+        id="invitation"
+    >
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero section">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    WITH GREAT JOY
+                </p>
+
+                <h1>
+                    You Are Invited
+                </h1>
+
+                <div class="gold-divider">
+
+                    <span></span>
+
+                    ✦
+
+                    <span></span>
+
+                </div>
+
+                <p class="hero-text">
+                    To celebrate a beautiful occasion
+                    filled with love, happiness and
+                    cherished moments.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PERSONALIZED GUEST CARD
+        ================================================== -->
+
+        <section class="guest-section section">
+
+            <div class="guest-card">
+
+                <div class="guest-card-overlay"></div>
+
+                <div class="guest-card-content">
+
+                    <p class="guest-label">
+                        DEAR
+                    </p>
+
+                    <h2 id="guestName">
+                        Guest
+                    </h2>
+
+                    <div class="guest-divider"></div>
+
+                    <p class="guest-message">
+
+                        We are delighted to invite
+                        you to celebrate this
+                        beautiful occasion with
+                        your family.
+
+                    </p>
+
+                    <div class="guest-count-box">
+
+                        <span
+                            id="guestCount"
+                            class="guest-number"
+                        >
+                            1
+                        </span>
+
+                        <span class="guest-count-label">
+                            INVITED GUESTS
+                        </span>
+
+                    </div>
+
+                    <p class="guest-bottom-message">
+
+                        Your presence and blessings
+                        would make our celebration
+                        even more special.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INVITATION MESSAGE
+        ================================================== -->
+
+        <section class="message-section section">
+
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    A SPECIAL OCCASION
+                </p>
+
+                <h2>
+                    With Love &amp; Blessings
+                </h2>
+
+                <div class="gold-divider">
+
+                    <span></span>
+
+                    ✦
+
+                    <span></span>
+
+                </div>
+
+                <p class="section-text">
+
+                    With the blessings of our families,
+                    we warmly invite you to join us
+                    and share in the happiness of
+                    this memorable celebration.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DATE / COUNTDOWN
+        ================================================== -->
+
+        <section class="date-section section">
+
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    SAVE THE DATE
+                </p>
+
+                <h2>
+                    A Celebration To Remember
+                </h2>
+
+                <div class="gold-divider">
+
+                    <span></span>
+
+                    ✦
+
+                    <span></span>
+
+                </div>
+
+                <div class="countdown">
+
+                    <div class="countdown-item">
+
+                        <span
+                            id="days"
+                            class="countdown-number"
+                        >
+                            00
+                        </span>
+
+                        <span class="countdown-label">
+                            DAYS
+                        </span>
+
+                    </div>
+
+
+                    <div class="countdown-item">
+
+                        <span
+                            id="hours"
+                            class="countdown-number"
+                        >
+                            00
+                        </span>
+
+                        <span class="countdown-label">
+                            HOURS
+                        </span>
+
+                    </div>
+
+
+                    <div class="countdown-item">
+
+                        <span
+                            id="minutes"
+                            class="countdown-number"
+                        >
+                            00
+                        </span>
+
+                        <span class="countdown-label">
+                            MINUTES
+                        </span>
+
+                    </div>
+
+
+                    <div class="countdown-item">
+
+                        <span
+                            id="seconds"
+                            class="countdown-number"
+                        >
+                            00
+                        </span>
+
+                        <span class="countdown-label">
+                            SECONDS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EVENTS
+        ================================================== -->
+
+        <section
+            class="events-section section"
+            id="events"
+        >
+
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    THE CELEBRATION
+                </p>
+
+                <h2>
+                    Wedding Events
+                </h2>
+
+                <div class="gold-divider">
+
+                    <span></span>
+
+                    ✦
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="events-grid">
+
+
+                    <!-- MEHNDI -->
+
+                    <article class="event-card">
+
+                        <div class="event-icon">
+                            ✦
+                        </div>
+
+                        <p class="event-label">
+                            FIRST CELEBRATION
+                        </p>
+
+                        <h3>
+                            Mehndi
+                        </h3>
+
+                        <div class="event-divider"></div>
+
+                        <p class="event-date">
+                            Date to be announced
+                        </p>
+
+                        <p class="event-time">
+                            Time to be announced
+                        </p>
+
+                    </article>
+
+
+                    <!-- WALIMA -->
+
+                    <article class="event-card">
+
+                        <div class="event-icon">
+                            ✦
+                        </div>
+
+                        <p class="event-label">
+                            SECOND CELEBRATION
+                        </p>
+
+                        <h3>
+                            Walima
+                        </h3>
+
+                        <div class="event-divider"></div>
+
+                        <p class="event-date">
+                            Date to be announced
+                        </p>
+
+                        <p class="event-time">
+                            Time to be announced
+                        </p>
+
+                    </article>
+
+
+                    <!-- OLD NIKAH CARD
+                         JS will hide this card -->
+
+                    <article class="event-card">
+
+                        <div class="event-icon">
+                            ✦
+                        </div>
+
+                        <p class="event-label">
+                            CEREMONY
+                        </p>
+
+                        <h3>
+                            Nikah
+                        </h3>
+
+                        <div class="event-divider"></div>
+
+                        <p class="event-date">
+                            Date to be announced
+                        </p>
+
+                        <p class="event-time">
+                            Time to be announced
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VENUE
+        ================================================== -->
+
+        <section
+            class="venue-section section"
+            id="venue"
+        >
+
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    THE VENUE
+                </p>
+
+                <h2>
+                    Join Us There
+                </h2>
+
+                <div class="gold-divider">
+
+                    <span></span>
+
+                    ✦
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="venue-card">
+
+                    <div class="venue-image">
+
+                        <img
+                            src="assets/venue.png"
+                            alt="Wedding Venue"
+                        >
+
+                    </div>
+
+
+                    <div class="venue-details">
+
+                        <p class="venue-label">
+                            CELEBRATION VENUE
+                        </p>
+
+                        <h3>
+                            Wedding Venue
+                        </h3>
+
+                        <p>
+                            Venue address will
+                            appear here.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="location-button"
+                        >
+
+                            <span>
+                                VIEW LOCATION
+                            </span>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FINAL MESSAGE
+        ================================================== -->
+
+        <section class="final-section section">
+
+            <div class="section-container">
+
+                <div class="final-symbol">
+                    ✦
+                </div>
+
+                <p class="eyebrow">
+                    YOUR PRESENCE MATTERS
+                </p>
+
+                <h2>
+                    We Would Be Honoured
+                    To Have You With Us
+                </h2>
+
+                <div class="gold-divider">
+
+                    <span></span>
+
+                    ✦
+
+                    <span></span>
+
+                </div>
+
+                <p class="section-text">
+
+                    Your presence, prayers and
+                    blessings will make this
+                    celebration even more memorable.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SHARE
+        ================================================== -->
+
+        <section class="share-section section">
+
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    SHARE THE INVITATION
+                </p>
+
+                <h2>
+                    Celebrate With Us
+                </h2>
+
+                <p class="section-text">
+
+                    We look forward to celebrating
+                    this special occasion with you.
+
+                </p>
+
+                <button
+                    type="button"
+                    class="share-button"
+                    id="shareButton"
+                >
+
+                    <span>
+                        SHARE INVITATION
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+            <div class="footer-ornament">
+                ✦
+            </div>
+
+            <p>
+                WITH LOVE &amp; GRATITUDE
+            </p>
+
+            <span>
+                © 2026 Wedding Invitation
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         MUSIC BUTTON
+    ====================================================== -->
+
+    <button
+        class="music-button"
+        id="musicButton"
+        type="button"
+        aria-label="Toggle background music"
+    >
+        ♫
+    </button>
+
+
+    <!-- =====================================================
+         AUDIO
+    ====================================================== -->
+
+    <audio
+        id="backgroundMusic"
+        loop
+        preload="auto"
+    >
+
+        <source
+            src="assets/music.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+
+</body>
+
+</html>

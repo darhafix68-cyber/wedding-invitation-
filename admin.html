@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         LOGIN
+    =============================== -->
+
+    <section class="login-screen" id="loginScreen">
+
+        <div class="login-card">
+
+            <div class="brand-icon">✦</div>
+
+            <p class="eyebrow">
+                WEDDING INVITATION
+            </p>
+
+            <h1>
+                Admin Panel
+            </h1>
+
+            <p class="login-subtitle">
+                Sign in to manage your invitation
+            </p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Admin email"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Sign In
+                </button>
+
+                <p
+                    class="error-message"
+                    id="loginError"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         DASHBOARD
+    =============================== -->
+
+    <div class="dashboard" id="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    ✦
+                </div>
+
+                <div>
+                    <strong>Wedding</strong>
+                    <span>Admin Panel</span>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <button
+                    class="nav-item active"
+                    data-section="overview"
+                >
+                    <span>⌂</span>
+                    Overview
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="events"
+                >
+                    <span>◷</span>
+                    Wedding Events
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="guests"
+                >
+                    <span>♧</span>
+                    Guests
+                </button>
+
+                <button
+                    class="nav-item"
+                    data-section="venue"
+                >
+                    <span>⌖</span>
+                    Venue
+                </button>
+
+            </nav>
+
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+            >
+                Logout
+            </button>
+
+        </aside>
+
+
+        <!-- MAIN -->
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="eyebrow">
+                        WEDDING INVITATION
+                    </p>
+
+                    <h2 id="pageTitle">
+                        Overview
+                    </h2>
+
+                </div>
+
+                <div class="admin-badge">
+                    ADMIN
+                </div>
+
+            </header>
+
+
+            <!-- ==========================
+                 OVERVIEW
+            =========================== -->
+
+            <section
+                class="dashboard-section active"
+                id="overview"
+            >
+
+                <div class="welcome-card">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            WELCOME
+                        </p>
+
+                        <h1>
+                            Manage Your Invitation
+                        </h1>
+
+                        <p>
+                            Update wedding details and
+                            manage personalized guest invitations.
+                        </p>
+
+                    </div>
+
+                    <div class="welcome-symbol">
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <span>Total Guests</span>
+
+                        <strong id="totalGuests">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>Confirmed</span>
+
+                        <strong id="confirmedGuests">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>Declined</span>
+
+                        <strong id="declinedGuests">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <span>Pending</span>
+
+                        <strong id="pendingGuests">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-card">
+
+                    <h3>
+                        Current Wedding Dates
+                    </h3>
+
+                    <div class="date-preview">
+
+                        <div>
+                            <small>MEHNDI</small>
+                            <strong id="overviewMehndi">
+                                Not set
+                            </strong>
+                        </div>
+
+                        <div>
+                            <small>WALIMA</small>
+                            <strong id="overviewWalima">
+                                Not set
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================
+                 EVENTS
+            =========================== -->
+
+            <section
+                class="dashboard-section"
+                id="events"
+            >
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="eyebrow">
+                            WEDDING DETAILS
+                        </p>
+
+                        <h3>
+                            Wedding Events
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <div class="event-edit">
+
+                        <div class="event-number">
+                            01
+                        </div>
+
+                        <div class="event-form">
+
+                            <h3>Mehndi</h3>
+
+                            <div class="form-row">
+
+                                <div class="input-group">
+
+                                    <label>Date</label>
+
+                                    <input
+                                        type="date"
+                                        id="mehndiDate"
+                                    >
+
+                                </div>
+
+                                <div class="input-group">
+
+                                    <label>Time</label>
+
+                                    <input
+                                        type="time"
+                                        id="mehndiTime"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-edit">
+
+                        <div class="event-number">
+                            02
+                        </div>
+
+                        <div class="event-form">
+
+                            <h3>Walima</h3>
+
+                            <div class="form-row">
+
+                                <div class="input-group">
+
+                                    <label>Date</label>
+
+                                    <input
+                                        type="date"
+                                        id="walimaDate"
+                                    >
+
+                                </div>
+
+                                <div class="input-group">
+
+                                    <label>Time</label>
+
+                                    <input
+                                        type="time"
+                                        id="walimaTime"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="primary-button save-button"
+                        id="saveEvents"
+                    >
+                        Save Wedding Dates
+                    </button>
+
+                    <p
+                        class="success-message"
+                        id="eventSuccess"
+                    ></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================
+                 GUESTS
+            =========================== -->
+
+            <section
+                class="dashboard-section"
+                id="guests"
+            >
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="eyebrow">
+                            INVITATION LIST
+                        </p>
+
+                        <h3>
+                            Guests
+                        </h3>
+
+                    </div>
+
+                    <button
+                        class="primary-button"
+                        id="addGuestButton"
+                    >
+                        + Add Guest
+                    </button>
+
+                </div>
+
+
+                <!-- ADD GUEST -->
+
+                <div
+                    class="form-card guest-form-card"
+                    id="guestFormCard"
+                >
+
+                    <h3>
+                        Add Guest
+                    </h3>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+
+                            <label>
+                                Guest Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="guestNameInput"
+                                placeholder="e.g. Ahmad"
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Number of Guests
+                            </label>
+
+                            <input
+                                type="number"
+                                id="allowedGuestsInput"
+                                min="1"
+                                value="1"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            class="secondary-button"
+                            id="cancelGuest"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            class="primary-button"
+                            id="saveGuest"
+                        >
+                            Save Guest
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GUEST TABLE -->
+
+                <div class="table-card">
+
+                    <div class="table-header">
+
+                        <span>Guest</span>
+                        <span>Guests</span>
+                        <span>Status</span>
+                        <span>Actions</span>
+
+                    </div>
+
+                    <div id="guestList">
+
+                        <div class="empty-state">
+                            No guests added yet.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================
+                 VENUE
+            =========================== -->
+
+            <section
+                class="dashboard-section"
+                id="venue"
+            >
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="eyebrow">
+                            LOCATION
+                        </p>
+
+                        <h3>
+                            Wedding Venue
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <div class="input-group">
+
+                        <label>
+                            Venue Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="venueName"
+                            placeholder="Venue name"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Venue Address
+                        </label>
+
+                        <textarea
+                            id="venueAddress"
+                            placeholder="Complete venue address"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Google Maps Link
+                        </label>
+
+                        <input
+                            type="url"
+                            id="mapsLink"
+                            placeholder="https://maps.app.goo.gl/..."
+                        >
+
+                    </div>
+
+
+                    <button
+                        class="primary-button save-button"
+                        id="saveVenue"
+                    >
+                        Save Venue
+                    </button>
+
+                    <p
+                        class="success-message"
+                        id="venueSuccess"
+                    ></p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script
+        type="module"
+        src="admin.js"
+    ></script>
+
+</body>
+</html>
